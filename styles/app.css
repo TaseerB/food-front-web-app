@@ -18,6 +18,15 @@ body {
   width: 100%;
 }
 
+.navbar-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 180px;
+  background-color: #0a1122;
+  width: 100%;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -169,6 +178,72 @@ body {
   font-size: 14px;
   color: #000000;
   line-height: 1.5;
+}
+
+/* Welcome Section */
+
+.container-welcome-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #F1F8FF;
+}
+
+.container-welcome-section .welcome-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: flex-start;
+  gap: 10px;
+  padding: 70px 70px 70px 70px;
+  background-color: #79a6d3;
+}
+
+/* images */
+.welcome-images img {
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.welcome-images .big-img {
+  width: 300px;
+  min-height: 300px;
+  align-self: stretch;
+}
+
+.welcome-images .short-img {
+  width: 200px;
+  height: 140px;
+}
+
+/* Text */
+.container-welcome-section textarea {
+  padding: 10px 0px
+}
+
+textarea > h1{
+  color: #0F172B;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 120% */
+}
+
+
+/* Staggering alignment */
+.welcome-images img:nth-child(2) {
+  align-self: flex-end; /* first short image align to bottom */
+}
+
+.welcome-images img:nth-child(3) {
+  align-self: flex-start; /* second short image align to top */
+}
+
+.container-welcome-section > div.menu {
+  grid-area: menu;
+}
+.container-welcome-section > div.content {
+  grid-area: content;
 }
 
 /* Footer */
